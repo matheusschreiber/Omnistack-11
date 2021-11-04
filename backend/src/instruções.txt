@@ -1,0 +1,36 @@
+Comandos para processos no node
+
+lsof -i :8080
+procura algum processo node na porta 8080
+
+ps -ef | grep node
+lista todos os processos node
+
+kill -9 PROCESS_ID
+termina o processo PROCESS_ID é um número de 5 digitos
+
+Tipos de requisições
+GET - Pega info
+POST - Posta info
+PUT - Altera info
+DELETE - Deleta info
+
+Tipos de parâmetros
+Query params: usa o "?" e podem ser concatenados usando "&"
+{{ _.baseURL }}/methods?aluno=Ronaldo&mensagem=Bem-Vindo
+
+Route params: usa para id's de usuario ou qualquer outra entidade. Usa-se o ":" no server.js
+{{ _.baseURL }}/methods/route/Cristiano
+
+Request body: parte principal, onde se passa os campos para alteração no back-end
+(usando o request body, precisa converter o body para json com o comando 
+app.use(express.json()), no arquivo index)
+
+
+Bancos de Dados
+SQL: MySQL, SQLite, PostgreSQL, Oracle, Microsoft SQL Server
+NoSQL: MongoDB, CouchDB
+
+npm install knex
+npm install sqlite3
+npx knex init
